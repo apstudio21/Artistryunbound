@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artistry Unbound — voice recordings</title>
+<meta name="description" content="Listen to a free preview, then take the full voice recording home.">
+<meta property="og:title" content="Artistry Unbound">
+<meta property="og:description" content="Listen to a free preview, then take the full voice recording home.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F5EDF0">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<main>
+  <!-- Block 1: About. Editable via content/about.json (data-f = text, data-f-src / data-f-alt = image) -->
+  <section class="about" id="about">
+    <figure class="about__photo">
+      <img src="images/about.webp" width="960" height="1280" alt="The artist sitting in a round swing among tropical greenery" data-f-src="about.photo" data-f-alt="about.photo_alt">
+      <div class="badge" role="img" aria-label="Artistry Unbound logo"></div>
+    </figure>
+
+    <div class="about__text">
+      <h1 class="about__title" data-f="about.title">Artistry Unbound</h1>
+      <p class="about__roles" data-f="about.roles">Singer, dancer, author, performer, creative director.</p>
+      <p class="about__bio" data-f="about.bio">This is a placeholder for a short story about you. Say who you are, what moves you, and why your voice is worth keeping close. Two or three sentences are enough.</p>
+      <a class="btn" href="#voice">
+        <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 12 12" width="12" height="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"/></svg></span>
+        <span data-f="about.cta_label">Listen to the voice</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Block 2: Cards. Data lives in content/cards.json; the inline copy below is a fallback for local viewing -->
+  <section class="voice" id="voice" aria-labelledby="voice-title">
+    <header class="voice__head">
+      <h2 id="voice-title" data-f="heading">Press play</h2>
+      <p data-f="intro">A collection of intimate voice notes for the moments when you need someone to remind you who you are.</p>
+    </header>
+    <div class="cards" id="cards"></div>
+    <script type="application/json" id="cards-data">{"heading": "Press play", "intro": "A collection of intimate voice notes for the moments when you need someone to remind you who you are.", "items": [{"title": "A little love note from me", "text": "To encourage you in your journey of life", "price": 0, "cover": "images/c1.webp", "cover_alt": "Green collage artwork with the words Soul at peace", "audio": "audio/love-note.m4a"}, {"title": "Recording title", "text": "A voice recording to keep close. Press play for a short preview.", "price": 20, "cover": "images/c2.webp", "cover_alt": "A yellow flower held in a hand", "audio": "audio/love-note.m4a"}, {"title": "Recording title", "text": "A quiet moment in sound. Listen to the preview, then take it home.", "price": 20, "cover": "images/c3.webp", "cover_alt": "Banana tree seen from below against a bright sky", "audio": "audio/love-note.m4a"}, {"title": "Made for you", "text": "This one is tailored uniquely for you. You can email me or telegram me to send me details of what style of voice note you would like me to create for you.", "price": 50, "cover": "images/c4.webp", "cover_alt": "A bitten slice of watermelon held up in a hand", "audio": "audio/love-note.m4a", "custom": true}]}</script>
+  </section>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <div class="how__in">
+      <h2 id="how-title">How it works</h2>
+      <ol class="how__steps" id="how-steps"></ol>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="faq__side">
+      <h2 id="faq-title">Questions</h2>
+      <p class="faq__note">Can't find your answer? Write to me on Instagram, Telegram or WhatsApp.</p>
+    </div>
+    <div class="faq__list" id="faq-list"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__top"><div class="badge foot__logo" role="img" aria-label="Artistry Unbound logo"></div><p class="foot__name">Artistry Unbound</p></div>
+  <p class="foot__lead">Questions, ideas, or a recording that didn't arrive? Write to me.</p>
+  <nav class="foot__links" id="foot-links" aria-label="Contact"></nav>
+  <p class="foot__small">Recordings are for personal listening only. &copy; <span id="year">2026</span> Artistry Unbound</p>
+</footer>
+
+<script type="application/json" id="info-data">{
+  "how_title": "How it works",
+  "steps": [
+    {"title": "Listen", "text": "Press play on any card. Every preview is free."},
+    {"title": "Choose and pay", "text": "Leave your name and where to send it, then pay with PayPal."},
+    {"title": "Receive", "text": "Once your payment is confirmed, the full recording arrives within {time}."}
+  ],
+  "faq_title": "Questions",
+  "faq": [
+    {"q": "What do I get?", "a": "The full recording as an audio file, sent to the email or messenger you choose."},
+    {"q": "How long does it take?", "a": "Usually within {time} after your payment is confirmed."},
+    {"q": "What is a custom made recording?", "a": "A recording made just for you. After you order, you tell me what you'd like to hear and we agree on the details before I record."},
+    {"q": "Can I share or resell a recording?", "a": "Recordings are for personal listening only. Please don't share, publish or resell them."},
+    {"q": "What if nothing arrives?", "a": "Write to me on Instagram, Telegram or WhatsApp and mention your order number."}
+  ]
+}
+</script>
+<script type="application/json" id="settings-data">{
+  "paypal_me": "",
+  "paypal_email": "",
+  "response_time": "30 minutes",
+  "instagram": "artistry.unbound",
+  "telegram": "",
+  "whatsapp": ""
+}
+</script>
+
+<!-- Forms for Netlify detection; the visible form lives inside the dialog -->
+<form name="paid" data-netlify="true" hidden>
+  <input name="order"><input name="card"><input name="price"><input name="name"><input name="channel"><input name="contact">
+</form>
+
+<dialog class="checkout" id="checkout" aria-labelledby="co-title">
+  <button class="co-close" type="button" aria-label="Close" data-close>&times;</button>
+
+  <div class="step" data-step="form">
+    <h2 id="co-title" class="co-title"></h2>
+    <p class="co-sum"></p>
+    <form class="order-form" id="order-form" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="order">
+      <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <input type="hidden" name="card"><input type="hidden" name="price"><input type="hidden" name="order">
+      <label class="fld">Your name<input name="name" required autocomplete="given-name" maxlength="60"></label>
+      <fieldset class="seg"><legend>Where should we send it?</legend>
+        <label><input type="radio" name="channel" value="Email" checked><span>Email</span></label>
+        <label><input type="radio" name="channel" value="Telegram"><span>Telegram</span></label>
+        <label><input type="radio" name="channel" value="WhatsApp"><span>WhatsApp</span></label>
+      </fieldset>
+      <label class="fld"><span id="contact-label">Your email</span><input name="contact" required maxlength="80"></label>
+      <label class="fld wish" hidden>What would you like to hear?<textarea name="wishes" rows="3" maxlength="600"></textarea></label>
+      <label class="agree"><input type="checkbox" name="agree" required><span>For personal listening only. I won't share or resell it.</span></label>
+      <p class="co-err" role="alert" hidden></p>
+      <button class="btn btn--sm co-submit" type="submit"></button>
+    </form>
+  </div>
+
+  <div class="step" data-step="pay" hidden>
+    <h2 class="co-title">Pay <span class="pay-amt"></span></h2>
+    <p class="co-sum">Send the payment with PayPal and add your order number in the note, so I can find it.</p>
+    <div class="kv"><span>Order number</span><b class="order-id"></b><button type="button" class="copy" data-copy=".order-id">Copy</button></div>
+    <div class="kv pp-mail" hidden><span>PayPal</span><b class="pp-email"></b><button type="button" class="copy" data-copy=".pp-email">Copy</button></div>
+    <p class="pp-none" hidden>PayPal details will appear here once they are added.</p>
+    <div class="co-actions">
+      <a class="btn btn--sm pp-link" target="_blank" rel="noopener" hidden>Pay with PayPal</a>
+      <button class="btn btn--sm btn--ghost" type="button" id="paid-btn">I've paid</button>
+    </div>
+    <p class="co-err" role="alert" hidden></p>
+    <button class="link" type="button" data-back>Change my details</button>
+  </div>
+
+  <div class="step" data-step="done" hidden>
+    <svg class="tick" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg>
+    <h2 class="co-title done-title"></h2>
+    <p class="co-sum done-text"></p>
+    <button class="btn btn--sm" type="button" data-close>Done</button>
+  </div>
+</dialog>
+
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/cards.js" defer></script>
+<script src="assets/js/shop.js" defer></script>
+</body>
+</html>

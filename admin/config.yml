@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: images/uploads
+public_folder: /images/uploads
+locale: en
+collections:
+  - name: pages
+    label: Page content
+    files:
+      - name: about
+        label: About block
+        file: content/about.json
+        fields:
+          - { name: title, label: Name / title, widget: string }
+          - { name: roles, label: Roles line, widget: string }
+          - { name: bio, label: Short bio, widget: text }
+          - { name: cta_label, label: Button text, widget: string }
+          - { name: photo, label: Photo, widget: image }
+          - { name: photo_alt, label: Photo description (for accessibility), widget: string }
+      - name: cards
+        label: Voice cards
+        file: content/cards.json
+        fields:
+          - { name: heading, label: Section title, widget: string }
+          - { name: intro, label: Section intro, widget: text }
+          - name: items
+            label: Cards
+            label_singular: card
+            widget: list
+            hint: "The first card is shown first. Price 0 = free."
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Short description, widget: text }
+              - { name: price, label: Price in USD (0 = free), widget: number, value_type: int, min: 0 }
+              - { name: cover, label: Cover image, widget: image }
+              - { name: cover_alt, label: Cover description (for accessibility), widget: string, required: false }
+              - { name: audio, label: Preview audio (short file, 30-60 sec), widget: file, required: false }
+              - { name: custom, label: Custom made (recorded after the order), widget: boolean, default: false, required: false }
+      - name: info
+        label: How it works and FAQ
+        file: content/info.json
+        fields:
+          - { name: how_title, label: Steps title, widget: string }
+          - name: steps
+            label: Steps
+            widget: list
+            hint: "Use {time} to insert the delivery time from Settings."
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - { name: faq_title, label: Questions title, widget: string }
+          - name: faq
+            label: Questions
+            widget: list
+            fields:
+              - { name: q, label: Question, widget: string }
+              - { name: a, label: Answer, widget: text }
+      - name: settings
+        label: Settings
+        file: content/settings.json
+        fields:
+          - { name: paypal_me, label: PayPal.me name (the part after paypal.me/), widget: string, required: false }
+          - { name: paypal_email, label: PayPal email (shown to buyers), widget: string, required: false }
+          - { name: response_time, label: Delivery time (e.g. 30 minutes), widget: string }
+          - { name: instagram, label: Instagram username, widget: string, required: false }
+          - { name: telegram, label: Telegram username, widget: string, required: false }
+          - { name: whatsapp, label: WhatsApp number with country code, widget: string, required: false }

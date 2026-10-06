@@ -1,0 +1,39 @@
+{
+  "heading": "Press play",
+  "intro": "A collection of intimate voice notes for the moments when you need someone to remind you who you are.",
+  "items": [
+    {
+      "title": "A little love note from me",
+      "text": "To encourage you in your journey of life",
+      "price": 0,
+      "cover": "images/c1.webp",
+      "cover_alt": "Green collage artwork with the words Soul at peace",
+      "audio": "audio/love-note.m4a"
+    },
+    {
+      "title": "Recording title",
+      "text": "A voice recording to keep close. Press play for a short preview.",
+      "price": 20,
+      "cover": "images/c2.webp",
+      "cover_alt": "A yellow flower held in a hand",
+      "audio": "audio/love-note.m4a"
+    },
+    {
+      "title": "Recording title",
+      "text": "A quiet moment in sound. Listen to the preview, then take it home.",
+      "price": 20,
+      "cover": "images/c3.webp",
+      "cover_alt": "Banana tree seen from below against a bright sky",
+      "audio": "audio/love-note.m4a"
+    },
+    {
+      "title": "Made for you",
+      "text": "This one is tailored uniquely for you. You can email me or telegram me to send me details of what style of voice note you would like me to create for you.",
+      "price": 50,
+      "cover": "images/c4.webp",
+      "cover_alt": "A bitten slice of watermelon held up in a hand",
+      "audio": "audio/love-note.m4a",
+      "custom": true
+    }
+  ]
+}
