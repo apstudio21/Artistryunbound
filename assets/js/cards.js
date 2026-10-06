@@ -18,7 +18,7 @@
     q('.card__title').textContent = item.title || ''; q('.card__text').textContent = item.text || '';
     q('.price').textContent = free ? 'Free' : '$' + item.price;
     var buy = q('.btn'); buy.textContent = free ? 'Get it free' : (item.custom ? 'Order yours' : 'Buy full version');
-    if (item.custom) q('.tag').hidden = false;
+    if (item.tag || item.custom) { var tg = q('.tag'); tg.textContent = item.tag || 'Custom made'; tg.hidden = false; }
     buy.addEventListener('click', function () { document.dispatchEvent(new CustomEvent('buy', { detail: item })); });
     var wave = q('.wave');
     for (var i = 0; i < 30; i++) { var b = document.createElement('i'); b.style.setProperty('--i', i); b.style.setProperty('--h', (28 + ((i * 37 + n * 17) % 62)) + '%'); wave.appendChild(b); }
@@ -39,7 +39,7 @@
     if (current) current.pause(); list.textContent = '';
     d.items.forEach(function (it, n) { list.appendChild(build(it, n)); });
     var h = document.querySelector('.voice [data-f="heading"]'), p = document.querySelector('.voice [data-f="intro"]');
-    if (h && d.heading) h.textContent = d.heading; if (p && d.intro) p.textContent = d.intro;
+    if (h && d.heading) h.textContent = d.heading; if (p) { p.textContent = d.intro || ''; p.hidden = !d.intro; }
   }
   try { render(JSON.parse(document.getElementById('cards-data').textContent)); } catch (e) {}
   fetch('content/cards.json').then(function (r) { return r.ok ? r.json() : null; }).then(render).catch(function () {});

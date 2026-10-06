@@ -7,13 +7,12 @@
   var T = function (s) { return String(s || '').replace(/\{time\}/g, S.response_time || '30 minutes'); };
   var el = function (tag, text, cls) { var e = document.createElement(tag); if (text != null) e.textContent = text; if (cls) e.className = cls; return e; };
 
-  var IC = ['<circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/>', '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/>', '<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3.5 7.5l8.5 6 8.5-6"/>'];
   function renderInfo() {
     var h = $('#how-title'), st = $('#how-steps'), ft = $('#faq-title'), fl = $('#faq-list');
     if (I.how_title) h.textContent = I.how_title; if (I.faq_title) ft.textContent = I.faq_title;
     st.textContent = ''; (I.steps || []).forEach(function (s, i) {
-      var li = el('li'), ic = el('div', null, 'how__icon'); ic.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + IC[i % 3] + '</svg>';
-      li.append(ic, el('b', i + 1), el('h3', s.title), el('p', T(s.text))); st.appendChild(li);
+      var li = el('li');
+      li.append(el('b', i + 1), el('h3', s.title), el('p', T(s.text))); st.appendChild(li);
     });
     fl.textContent = ''; (I.faq || []).forEach(function (f) {
       var d = el('details'), sm = el('summary', f.q); d.append(sm, el('p', T(f.a))); fl.appendChild(d);
@@ -28,8 +27,15 @@
     if (S.whatsapp) add('WhatsApp', 'https://wa.me/' + String(S.whatsapp).replace(/\D/g, ''));
     $('#year').textContent = new Date().getFullYear();
   }
-  renderInfo(); renderFooter();
-  load('info', function (d) { I = d; renderInfo(); }); load('settings', function (d) { S = d; renderFooter(); });
+  document.documentElement.classList.add('js');
+  function reveal() {
+    var items = document.querySelectorAll('.how__steps li');
+    if (!('IntersectionObserver' in window)) { items.forEach(function (i) { i.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .25 });
+    items.forEach(function (i, n) { i.style.transitionDelay = (n * 0.1) + 's'; io.observe(i); });
+  }
+  renderInfo(); renderFooter(); reveal();
+  load('info', function (d) { I = d; renderInfo(); reveal(); }); load('settings', function (d) { S = d; renderFooter(); });
 
   // Checkout
   var dlg = $('#checkout'), form = $('#order-form'), cur = null, free = false, orderId = '';

@@ -36,6 +36,7 @@ collections:
               - { name: cover, label: Cover image, widget: image }
               - { name: cover_alt, label: Cover description (for accessibility), widget: string, required: false }
               - { name: audio, label: Preview audio (short file, 30-60 sec), widget: file, required: false }
+              - { name: tag, label: Tag on the cover (e.g. Universal love note), widget: string, required: false }
               - { name: custom, label: Custom made (recorded after the order), widget: boolean, default: false, required: false }
       - name: info
         label: How it works and FAQ
