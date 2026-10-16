@@ -8,7 +8,7 @@
       "price": 0,
       "cover": "images/c1.webp",
       "cover_alt": "Green collage artwork with the words Soul at peace",
-      "audio": "audio/love-note.m4a"
+      "audio": "audio/free-note.m4a"
     },
     {
       "title": "To remind you why your dreams matter",
@@ -16,7 +16,7 @@
       "price": 20,
       "cover": "images/c2.webp",
       "cover_alt": "A yellow flower held in a hand",
-      "audio": "audio/love-note.m4a"
+      "audio": "audio/dreams-preview.m4a"
     },
     {
       "title": "Faith",
@@ -24,7 +24,7 @@
       "price": 20,
       "cover": "images/c3.webp",
       "cover_alt": "Banana tree seen from below against a bright sky",
-      "audio": "audio/love-note.m4a"
+      "audio": "audio/faith-preview.m4a"
     },
     {
       "title": "Made for you",
@@ -32,7 +32,7 @@
       "price": 50,
       "cover": "images/c4.webp",
       "cover_alt": "A bitten slice of watermelon held up in a hand",
-      "audio": "audio/love-note.m4a",
+      "audio": "",
       "custom": true
     }
   ]

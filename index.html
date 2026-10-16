@@ -43,12 +43,12 @@
       <p data-f="intro" hidden></p>
     </header>
     <div class="cards" id="cards"></div>
-    <script type="application/json" id="cards-data">{"heading": "A collection of intimate voice notes for the moments when you need someone to remind you who you are.", "intro": "", "items": [{"title": "A little love note from me", "text": "To encourage you in your journey of life", "price": 0, "cover": "images/c1.webp", "cover_alt": "Green collage artwork with the words Soul at peace", "audio": "audio/love-note.m4a"}, {"title": "To remind you why your dreams matter", "text": "This will consist of a loving channeling and affirmations that will activate you immediately into the space of dreams where what you once imagined suddenly begins to become real in your world!", "price": 20, "cover": "images/c2.webp", "cover_alt": "A yellow flower held in a hand", "audio": "audio/love-note.m4a"}, {"title": "Faith", "text": "When you don’t have nothing this audio will activate you into attracting exactly what you need that will not only uplift your spirit but place you in a better happier timeline. When you don’t have nothing and hope is gone. Have faith.", "price": 20, "cover": "images/c3.webp", "cover_alt": "Banana tree seen from below against a bright sky", "audio": "audio/love-note.m4a"}, {"title": "Made for you", "text": "This one is tailored uniquely for you. You can email me or telegram me to send me details of what style of voice note you would like me to create for you.", "price": 50, "cover": "images/c4.webp", "cover_alt": "A bitten slice of watermelon held up in a hand", "audio": "audio/love-note.m4a", "custom": true}]}</script>
+    <script type="application/json" id="cards-data">{"heading": "A collection of intimate voice notes for the moments when you need someone to remind you who you are.", "intro": "", "items": [{"title": "A little love note from me", "text": "To encourage you in your journey of life", "price": 0, "cover": "images/c1.webp", "cover_alt": "Green collage artwork with the words Soul at peace", "audio": "audio/free-note.m4a"}, {"title": "To remind you why your dreams matter", "text": "This will consist of a loving channeling and affirmations that will activate you immediately into the space of dreams where what you once imagined suddenly begins to become real in your world!", "price": 20, "cover": "images/c2.webp", "cover_alt": "A yellow flower held in a hand", "audio": "audio/dreams-preview.m4a"}, {"title": "Faith", "text": "When you don’t have nothing this audio will activate you into attracting exactly what you need that will not only uplift your spirit but place you in a better happier timeline. When you don’t have nothing and hope is gone. Have faith.", "price": 20, "cover": "images/c3.webp", "cover_alt": "Banana tree seen from below against a bright sky", "audio": "audio/faith-preview.m4a"}, {"title": "Made for you", "text": "This one is tailored uniquely for you. You can email me or telegram me to send me details of what style of voice note you would like me to create for you.", "price": 50, "cover": "images/c4.webp", "cover_alt": "A bitten slice of watermelon held up in a hand", "audio": "", "custom": true}]}</script>
   </section>
 
   <section class="how" id="how" aria-labelledby="how-title">
     <div class="how__in">
-      <h2 id="how-title">How it works</h2>
+      <div class="how__head"><h2 id="how-title">How it works</h2><div class="eq" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i><i style="--i:10"></i><i style="--i:11"></i><i style="--i:12"></i><i style="--i:13"></i><i style="--i:14"></i><i style="--i:15"></i><i style="--i:16"></i><i style="--i:17"></i></div></div>
       <ol class="how__steps" id="how-steps"></ol>
     </div>
   </section>
@@ -57,8 +57,14 @@
     <div class="faq__side">
       <h2 id="faq-title">Questions</h2>
       <p class="faq__note">Can't find your answer? Write to me on Instagram, Telegram or WhatsApp.</p>
+      <div class="contacts" id="faq-contacts"></div>
     </div>
     <div class="faq__list" id="faq-list"></div>
+  </section>
+
+  <section class="insta" id="insta" aria-labelledby="insta-title">
+    <div class="insta__head"><h2 id="insta-title">Follow along</h2><a class="insta__handle" target="_blank" rel="noopener" hidden></a></div>
+    <div class="insta__row" id="insta-row"></div>
   </section>
 </main>
 
@@ -69,46 +75,17 @@
   <p class="foot__small">Recordings are for personal listening only. &copy; <span id="year">2026</span> Artistry Unbound</p>
 </footer>
 
-<script type="application/json" id="info-data">{
-  "how_title": "How it works",
-  "steps": [
-    {"title": "Listen", "text": "Press play on any card. Every preview is free."},
-    {"title": "Choose and pay", "text": "Leave your name and where to send it, then pay with PayPal."},
-    {"title": "Receive", "text": "Once your payment is confirmed, the full recording arrives within {time}."}
-  ],
-  "faq_title": "Questions",
-  "faq": [
-    {"q": "What do I get?", "a": "The full recording as an audio file, sent to the email or messenger you choose."},
-    {"q": "How long does it take?", "a": "Usually within {time} after your payment is confirmed."},
-    {"q": "What is a custom made recording?", "a": "A recording made just for you. After you order, you tell me what you'd like to hear and we agree on the details before I record."},
-    {"q": "Can I share or resell a recording?", "a": "Recordings are for personal listening only. Please don't share, publish or resell them."},
-    {"q": "What if nothing arrives?", "a": "Write to me on Instagram, Telegram or WhatsApp and mention your order number."}
-  ]
-}
-</script>
-<script type="application/json" id="settings-data">{
-  "paypal_me": "",
-  "paypal_email": "",
-  "response_time": "30 minutes",
-  "instagram": "artistry.unbound",
-  "telegram": "",
-  "whatsapp": ""
-}
-</script>
+<script type="application/json" id="info-data">{"how_title": "How it works", "steps": [{"title": "Listen", "text": "Press play on any card. Every preview is free."}, {"title": "Choose and pay", "text": "Leave your name and where to send it, then pay with the method you choose."}, {"title": "Receive", "text": "Once your payment is confirmed, the full recording arrives within {time}."}], "faq_title": "Questions", "faq": [{"q": "What do I get?", "a": "The full recording as an audio file, sent to the email or messenger you choose."}, {"q": "How long does it take?", "a": "Usually within {time} after your payment is confirmed."}, {"q": "What is a custom made recording?", "a": "A recording made just for you. After you order, you tell me what you'd like to hear and we agree on the details before I record."}, {"q": "Can I share or resell a recording?", "a": "Recordings are for personal listening only. Please don't share, publish or resell them."}, {"q": "What if nothing arrives?", "a": "Write to me on Instagram, Telegram or WhatsApp and mention your order number."}]}</script>
+<script type="application/json" id="settings-data">{"payment_methods": [{"name": "PayPal", "pay_link": "", "details": [{"label": "PayPal email", "value": ""}], "note": ""}], "response_time": "30 minutes", "instagram": "artistry.unbound", "telegram": "", "whatsapp": "", "instagram_feed": ""}</script>
 
-<!-- Forms for Netlify detection; the visible form lives inside the dialog -->
-<form name="paid" data-netlify="true" hidden>
-  <input name="order"><input name="card"><input name="price"><input name="name"><input name="channel"><input name="contact">
-</form>
 
-<dialog class="checkout" id="checkout" aria-labelledby="co-title">
+<dialog class="checkout" id="checkout" tabindex="-1" aria-labelledby="co-title">
   <button class="co-close" type="button" aria-label="Close" data-close>&times;</button>
 
   <div class="step" data-step="form">
     <h2 id="co-title" class="co-title"></h2>
     <p class="co-sum"></p>
-    <form class="order-form" id="order-form" name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="order">
+    <form class="order-form" id="order-form">
       <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <input type="hidden" name="card"><input type="hidden" name="price"><input type="hidden" name="order">
       <label class="fld">Your name<input name="name" required autocomplete="given-name" maxlength="60"></label>
@@ -127,12 +104,16 @@
 
   <div class="step" data-step="pay" hidden>
     <h2 class="co-title">Pay <span class="pay-amt"></span></h2>
-    <p class="co-sum">Send the payment with PayPal and add your order number in the note, so I can find it.</p>
+    <p class="co-sum">Pay with the method you prefer and add your order number in the note, so I can find it.</p>
     <div class="kv"><span>Order number</span><b class="order-id"></b><button type="button" class="copy" data-copy=".order-id">Copy</button></div>
-    <div class="kv pp-mail" hidden><span>PayPal</span><b class="pp-email"></b><button type="button" class="copy" data-copy=".pp-email">Copy</button></div>
-    <p class="pp-none" hidden>PayPal details will appear here once they are added.</p>
+    <fieldset class="seg pm-pick" id="pm-pick" hidden><legend>Payment method</legend></fieldset>
+    <div class="pm" id="pm" hidden>
+      <div id="pm-rows"></div>
+      <p class="pm-note" hidden></p>
+    </div>
+    <p class="pm-none" hidden>Payment details will appear here once they are added.</p>
     <div class="co-actions">
-      <a class="btn btn--sm pp-link" target="_blank" rel="noopener" hidden>Pay with PayPal</a>
+      <a class="btn btn--sm pm-link" target="_blank" rel="noopener" hidden></a>
       <button class="btn btn--sm btn--ghost" type="button" id="paid-btn">I've paid</button>
     </div>
     <p class="co-err" role="alert" hidden></p>

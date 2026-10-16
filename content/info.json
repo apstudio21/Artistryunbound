@@ -1,16 +1,40 @@
 {
   "how_title": "How it works",
   "steps": [
-    {"title": "Listen", "text": "Press play on any card. Every preview is free."},
-    {"title": "Choose and pay", "text": "Leave your name and where to send it, then pay with PayPal."},
-    {"title": "Receive", "text": "Once your payment is confirmed, the full recording arrives within {time}."}
+    {
+      "title": "Listen",
+      "text": "Press play on any card. Every preview is free."
+    },
+    {
+      "title": "Choose and pay",
+      "text": "Leave your name and where to send it, then pay with the method you choose."
+    },
+    {
+      "title": "Receive",
+      "text": "Once your payment is confirmed, the full recording arrives within {time}."
+    }
   ],
   "faq_title": "Questions",
   "faq": [
-    {"q": "What do I get?", "a": "The full recording as an audio file, sent to the email or messenger you choose."},
-    {"q": "How long does it take?", "a": "Usually within {time} after your payment is confirmed."},
-    {"q": "What is a custom made recording?", "a": "A recording made just for you. After you order, you tell me what you'd like to hear and we agree on the details before I record."},
-    {"q": "Can I share or resell a recording?", "a": "Recordings are for personal listening only. Please don't share, publish or resell them."},
-    {"q": "What if nothing arrives?", "a": "Write to me on Instagram, Telegram or WhatsApp and mention your order number."}
+    {
+      "q": "What do I get?",
+      "a": "The full recording as an audio file, sent to the email or messenger you choose."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "Usually within {time} after your payment is confirmed."
+    },
+    {
+      "q": "What is a custom made recording?",
+      "a": "A recording made just for you. After you order, you tell me what you'd like to hear and we agree on the details before I record."
+    },
+    {
+      "q": "Can I share or resell a recording?",
+      "a": "Recordings are for personal listening only. Please don't share, publish or resell them."
+    },
+    {
+      "q": "What if nothing arrives?",
+      "a": "Write to me on Instagram, Telegram or WhatsApp and mention your order number."
+    }
   ]
 }

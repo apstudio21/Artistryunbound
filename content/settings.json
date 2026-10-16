@@ -1,8 +1,20 @@
 {
-  "paypal_me": "",
-  "paypal_email": "",
+  "payment_methods": [
+    {
+      "name": "PayPal",
+      "pay_link": "",
+      "details": [
+        {
+          "label": "PayPal email",
+          "value": ""
+        }
+      ],
+      "note": ""
+    }
+  ],
   "response_time": "30 minutes",
   "instagram": "artistry.unbound",
   "telegram": "",
-  "whatsapp": ""
+  "whatsapp": "",
+  "instagram_feed": ""
 }
