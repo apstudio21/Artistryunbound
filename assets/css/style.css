@@ -104,23 +104,17 @@ a.ico:hover{background:var(--ink);color:var(--paper);transform:translateY(-3px)}
 /* How it works: dark rounded panel */
 .how{background:var(--ink);color:var(--paper);margin:clamp(16px,3vw,40px) clamp(8px,2vw,24px) 0;border-radius:clamp(28px,5vw,64px);overflow:hidden}
 .how__in{max-width:1180px;margin:0 auto;padding:clamp(48px,8vw,104px) var(--pad)}
-.how__head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(32px,6vw,72px)}
 .how h2,.faq h2,.insta h2{font:600 clamp(2.2rem,5vw,3.6rem)/.95 var(--serif);letter-spacing:-.015em;margin:0}
-.eq{display:flex;align-items:flex-end;gap:4px;height:48px;flex:none}
-.eq i{width:4px;height:100%;border-radius:2px;background:var(--blush);opacity:.55;transform-origin:bottom;transform:scaleY(.25);animation:eq 1.8s ease-in-out infinite;animation-delay:calc(var(--i)*-.17s)}
-.eq i:nth-child(5n+2){background:var(--red);opacity:1}
-@keyframes eq{50%{transform:scaleY(1)}}
+.how h2{margin-bottom:clamp(32px,6vw,64px)}
 .how__steps{list-style:none;margin:0;padding:0;display:grid;gap:clamp(32px,5vw,40px) clamp(24px,5vw,72px)}
-.how__steps li{position:relative;padding-top:22px}
-.how__steps li::before{content:"";position:absolute;top:0;left:0;width:36px;height:3px;border-radius:2px;background:var(--red)}
-.how__steps b{display:block;font:italic 500 clamp(4rem,9vw,6.5rem)/.85 var(--serif);color:transparent;-webkit-text-stroke:1.5px var(--blush);margin-bottom:18px}
+.how__steps li{position:relative;padding-top:28px;border-top:1px solid rgba(240,211,214,.22)}
+.how__steps li::before{content:"";position:absolute;top:-2px;left:0;width:44px;height:3px;border-radius:2px;background:var(--red)}
 .how__steps h3{font:600 clamp(1.7rem,2.8vw,2.2rem)/1.05 var(--serif);margin:0 0 .5em}
 .how__steps p{margin:0;max-width:30ch;color:rgba(245,237,240,.74)}
 @media (min-width:768px){.how__steps{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:520px){.eq{display:none}}
 .js .how__steps li{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .js .how__steps li.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.js .how__steps li{opacity:1;transform:none;transition:none}.eq i{animation:none;transform:scaleY(.6)}}
+@media (prefers-reduced-motion:reduce){.js .how__steps li{opacity:1;transform:none;transition:none}}
 
 /* FAQ: open lines, contacts on the left */
 .faq{max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,120px) var(--pad);display:grid;gap:32px}
