@@ -109,6 +109,7 @@ a.ico:hover{background:var(--ink);color:var(--paper);transform:translateY(-3px)}
 .how__steps{list-style:none;margin:0;padding:0;display:grid;gap:clamp(32px,5vw,40px) clamp(24px,5vw,72px)}
 .how__steps li{position:relative;padding-top:28px;border-top:1px solid rgba(240,211,214,.22)}
 .how__steps li::before{content:"";position:absolute;top:-2px;left:0;width:44px;height:3px;border-radius:2px;background:var(--red)}
+.how__steps b{display:block;font:500 clamp(2.4rem,4vw,3.2rem)/1 var(--sans);letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:var(--red);margin-bottom:16px}
 .how__steps h3{font:600 clamp(1.7rem,2.8vw,2.2rem)/1.05 var(--serif);margin:0 0 .5em}
 .how__steps p{margin:0;max-width:30ch;color:rgba(245,237,240,.74)}
 @media (min-width:768px){.how__steps{grid-template-columns:repeat(3,1fr)}}

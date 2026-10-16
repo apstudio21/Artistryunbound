@@ -12,7 +12,7 @@
     if (I.how_title) h.textContent = I.how_title; if (I.faq_title) ft.textContent = I.faq_title;
     st.textContent = ''; (I.steps || []).forEach(function (s, i) {
       var li = el('li');
-      li.append(el('h3', s.title), el('p', T(s.text))); st.appendChild(li);
+      li.append(el('b', ('0' + (i + 1)).slice(-2)), el('h3', s.title), el('p', T(s.text))); st.appendChild(li);
     });
     fl.textContent = ''; (I.faq || []).forEach(function (f) {
       var d = el('details'), sm = el('summary', f.q); d.append(sm, el('p', T(f.a))); fl.appendChild(d);
